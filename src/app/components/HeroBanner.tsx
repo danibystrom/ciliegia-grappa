@@ -9,6 +9,7 @@ import {
 
 export default function HeroBanner() {
   const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
@@ -16,7 +17,7 @@ export default function HeroBanner() {
     <Box
       sx={{
         height: "100vh",
-        backgroundImage: "url('./src/assets/hero-banner.jpg')",
+        backgroundImage: "url(./assets/banner-img.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "flex",
@@ -29,7 +30,7 @@ export default function HeroBanner() {
     >
       <Box
         component="img"
-        src="url('./src/assets/logo.png')"
+        src="./assets/logo.png"
         alt="Ciliegia Logo"
         sx={{
           width: isMobile ? "150px" : isTablet ? "300px" : "400px",
