@@ -18,8 +18,8 @@ export default function HeroBanner() {
       sx={{
         height: "100vh",
         backgroundImage: "url(./assets/banner-img.jpg)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundSize: "contain",
+        backgroundPosition: "top",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
