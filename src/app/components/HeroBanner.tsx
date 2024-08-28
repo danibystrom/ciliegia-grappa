@@ -33,7 +33,13 @@ export default function HeroBanner() {
         src="./assets/logo.png"
         alt="Ciliegia Logo"
         sx={{
-          width: isMobile ? "150px" : isTablet ? "300px" : "400px",
+          width: isMobile
+            ? "400px" 
+            : isTablet
+            ? "600px" 
+            : isDesktop
+            ? "800px" 
+            : "800px", 
           height: "auto",
         }}
       />
