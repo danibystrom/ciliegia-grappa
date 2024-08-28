@@ -16,7 +16,7 @@ export default function HeroBanner() {
     <Box
       sx={{
         height: "100vh",
-        backgroundImage: "./src/assets/images/hero-banner.jpg",
+        backgroundImage: "url('./src/assets/hero-banner.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "flex",
@@ -29,7 +29,7 @@ export default function HeroBanner() {
     >
       <Box
         component="img"
-        src="/path-to-your-logo.png"
+        src="url('./src/assets/logo.png')"
         alt="Ciliegia Logo"
         sx={{
           width: isMobile ? "150px" : isTablet ? "300px" : "400px",
