@@ -67,24 +67,31 @@ export default function Recipes() {
                   sx={{
                     backgroundColor: "#EEEAE6",
                     padding: "16px",
+                    height: "150px", // Sätt en fast höjd
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "flex-start", // Placera texten i toppen
                     "&:last-child": { paddingBottom: "16px" },
-                    flexGrow: 1,
                   }}
                 >
                   <Typography variant="h6">{recipe.title}</Typography>
-                  <Typography variant="body2">{recipe.description}</Typography>
+                  <Typography variant="body2" sx={{ marginTop: 2 }}>
+                    {recipe.description}
+                  </Typography>
                 </CardContent>
                 <CardActions
                   sx={{
                     display: "flex",
                     justifyContent: "center",
-                    marginTop: "auto", // Funkar inte
+                    marginTop: "auto", // Placera knapparna längst ner
+                    padding: "8px 16px",
                   }}
                 >
                   <Button
                     size="large"
                     sx={{
                       color: "#C1121F",
+                      margin: "50px",
                       "&:hover": {
                         backgroundColor: "transparent",
                         fontWeight: 600,
