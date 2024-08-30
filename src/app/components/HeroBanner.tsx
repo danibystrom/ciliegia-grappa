@@ -29,23 +29,42 @@ export default function HeroBanner() {
       }}
     >
       <Box
-        component="img"
-        src="./assets/logo.png"
-        alt="Ciliegia Logo"
         sx={{
-          width: isMobile
-            ? "400px" 
-            : isTablet
-            ? "600px" 
-            : isDesktop
-            ? "800px" 
-            : "800px", 
-          height: "auto",
+          display: "flex",
+          alignItems: "center",
+          gap: 2,
+          flexWrap: "wrap",
         }}
-      />
-      <Typography variant="subtitle1" sx={{ mt: 2 }}>
-        SWEET TEMPTATION, CHERRY SENSATION
-      </Typography>
+      >
+        <Box
+          component="img"
+          src="./assets/logo.png"
+          alt="Ciliegia Logo"
+          sx={{
+            width: isMobile
+              ? "400px"
+              : isTablet
+              ? "600px"
+              : isDesktop
+              ? "800px"
+              : "800px",
+            height: "auto",
+            padding: "10px",
+          }}
+        />
+        <Typography
+          variant="subtitle1"
+          sx={{
+            fontSize: isMobile ? "1rem" : "1.1rem",
+            maxWidth: isMobile ? "150px" : "200px",
+            lineHeight: 1.5,
+            justifyContent: "bottom",
+          }}
+        >
+          SWEET TEMPTATION, CHERRY SENSATION
+        </Typography>
+      </Box>
+
       <Typography variant="body1" sx={{ mt: 5 }}>
         PUT SOME ICE IN IT
         <br />
@@ -61,6 +80,7 @@ export default function HeroBanner() {
           mt: 4,
           backgroundColor: "#000",
           color: "#fff",
+          borderRadius: "0 !important",
           "&:hover": {
             backgroundColor: "#333",
           },
