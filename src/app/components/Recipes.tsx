@@ -1,7 +1,9 @@
 "use client";
 import {
   Box,
+  Button,
   Card,
+  CardActions,
   CardContent,
   CardMedia,
   Grid,
@@ -22,7 +24,7 @@ export default function Recipes() {
         minHeight: "100vh",
       }}
     >
-      <Grid container spacing={1} sx={{ maxWidth: "100%" }}>
+      <Grid container spacing={2} sx={{ maxWidth: "100%" }}>
         {recipes.map((recipe) => (
           <Grid
             item
@@ -37,12 +39,14 @@ export default function Recipes() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                gap: 1,
+                width: 280,
+                maxWidth: "100%",
               }}
             >
               <Card
                 sx={{
-                  maxWidth: 280,
+                  display: "flex",
+                  flexDirection: "column",
                   width: "100%",
                   boxShadow: "none",
                   backgroundColor: "transparent",
@@ -64,15 +68,34 @@ export default function Recipes() {
                     backgroundColor: "#EEEAE6",
                     padding: "16px",
                     "&:last-child": { paddingBottom: "16px" },
+                    flexGrow: 1,
                   }}
                 >
                   <Typography variant="h6">{recipe.title}</Typography>
                   <Typography variant="body2">{recipe.description}</Typography>
                 </CardContent>
+                <CardActions
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginTop: "auto", // Funkar inte
+                  }}
+                >
+                  <Button
+                    size="large"
+                    sx={{
+                      color: "#C1121F",
+                      "&:hover": {
+                        backgroundColor: "transparent",
+                        fontWeight: 600,
+                        boxShadow: "none",
+                      },
+                    }}
+                  >
+                    SHOW ME
+                  </Button>
+                </CardActions>
               </Card>
-              <Typography variant="h6" sx={{ textAlign: "center" }}>
-                SHOW ME
-              </Typography>
             </Box>
           </Grid>
         ))}
