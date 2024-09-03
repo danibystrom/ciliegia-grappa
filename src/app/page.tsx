@@ -1,11 +1,13 @@
+import AboutSection from "./components/AboutSection";
 import HeroBanner from "./components/HeroBanner";
-import Recipes from "./components/Recipes";
+import RecipeSection from "./components/RecipeSection";
 
 export default function Home() {
   return (
     <>
       <HeroBanner />
-      <Recipes />
+      <RecipeSection />
+      <AboutSection />
     </>
   );
 }

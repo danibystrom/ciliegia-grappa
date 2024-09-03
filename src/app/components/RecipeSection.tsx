@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { recipes } from "../data/data";
 
-export default function Recipes() {
+export default function RecipeSection() {
   return (
     <Box
       sx={{
