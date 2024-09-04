@@ -1,5 +1,11 @@
 "use client";
-import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
+import {
+  Box,
+  Button,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 
 export default function HeroBanner() {
   const theme = useTheme();
@@ -10,26 +16,29 @@ export default function HeroBanner() {
   return (
     <Box
       sx={{
-        height: "100vh",
-        backgroundImage: "url(./assets/hero-banner.jpg)",
+        height: "100dvh",
+        backgroundImage: isMobile
+          ? "url(./assets/hero-banner-mobile.jpg)"
+          : "url(./assets/hero-banner.jpg)",
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "bottom center",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "flex-start", // Ensures content starts from the top
-        alignItems: "flex-start", // Align items to the left
-        padding: isMobile ? "20px" : "50px",
+        justifyContent: "flex-start",
+        alignItems: "flex-start",
+        paddingLeft: isMobile ? "20px" : "50px",
         color: "#000",
+        position: "relative",
       }}
     >
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row", // Align items in a row
-          alignItems: "center", // Align items vertically centered
+          flexDirection: "row",
+          alignItems: "center",
           gap: 2,
           flexWrap: "wrap",
-          width: "100%", // Ensure it uses full width to align items properly
+          width: "100%",
         }}
       >
         <Box
@@ -38,7 +47,7 @@ export default function HeroBanner() {
           alt="Ciliegia Logo"
           sx={{
             width: isMobile
-              ? "400px"
+              ? "300px"
               : isTablet
               ? "600px"
               : isDesktop
@@ -54,11 +63,34 @@ export default function HeroBanner() {
             fontSize: isMobile ? "1rem" : "1.1rem",
             maxWidth: isMobile ? "150px" : "200px",
             lineHeight: 1.5,
-            textAlign: "left", // Align text to the left
+            textAlign: "left",
           }}
         >
           SWEET TEMPTATION, CHERRY SENSATION
         </Typography>
+      </Box>
+
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: "15vh",
+          left: "10px",
+          backgroundColor: "transparent",
+          padding: "50px",
+          border: "none",
+          borderShadow: "none",
+        }}
+      >
+        <Typography variant="h6" sx={{ mb: 1 }}>
+          Title Here
+        </Typography>
+        <Typography variant="body2" sx={{ mb: 2 }}>
+          This is the body text of the box. You can include more information
+          here.
+        </Typography>
+        <Button variant="contained" color="primary">
+          Click Me
+        </Button>
       </Box>
     </Box>
   );
