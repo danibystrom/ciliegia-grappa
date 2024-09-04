@@ -1,6 +1,7 @@
 // ButtonAppBar.tsx
 "use client";
-import { Typography, useMediaQuery, useTheme } from "@mui/material";
+import DragHandleIcon from "@mui/icons-material/DragHandle";
+import { useMediaQuery, useTheme } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
@@ -19,14 +20,14 @@ export default function Navbar() {
         sx={{
           backgroundColor: "#EEEAE6",
           boxShadow: "none",
-          margin: 0, // Lägg till detta om det inte redan finns
-          padding: 0, // Lägg till detta om det inte redan finns
+          margin: 0,
+          padding: 0,
         }}
       >
         <Toolbar
           sx={{
-            margin: 0, // Lägg till detta om det inte redan finns
-            padding: 0, // Lägg till detta om det inte redan finns
+            margin: 0,
+            padding: 0,
           }}
         >
           <Box
@@ -41,13 +42,21 @@ export default function Navbar() {
           <IconButton
             size="large"
             edge="end"
-            color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
+            sx={{
+              mr: 2,
+              color: "#000000", // Ensure IconButton does not override icon color
+              "&:hover": {
+                boxShadow: "none",
+                backgroundColor: "transparent",
+              },
+            }}
           >
-            <Typography variant="h6" sx={{ color: "#000000" }}>
-              MENU
-            </Typography>
+            <DragHandleIcon
+              sx={{
+                color: "#000000", // Ensure the color is explicitly set
+              }}
+            />
           </IconButton>
         </Toolbar>
       </AppBar>
