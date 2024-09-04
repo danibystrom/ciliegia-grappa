@@ -8,23 +8,51 @@ import {
   CardMedia,
   Grid,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import { recipes } from "../data/data";
 
 export default function RecipeSection() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Box
       sx={{
         backgroundColor: "#EEEAE6",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
         padding: "20px",
-        minHeight: "100vh",
+        minHeight: "80vh",
       }}
     >
-      <Grid container spacing={2} sx={{ maxWidth: "100%" }}>
+      {/* Title Section */}
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "flex-start",
+          paddingLeft: isMobile ? "20px" : "50px",
+          marginBottom: "5vh",
+          marginTop: "5vh",
+        }}
+      >
+        <Typography variant="h4" sx={{ color: "#000" }}>
+          RECIPES
+        </Typography>
+      </Box>
+
+      {/* Recipes Grid */}
+      <Grid
+        container
+        spacing={2}
+        sx={{
+          maxWidth: "100%",
+          display: "flex",
+          justifyContent: "center", // Centers the Grid items horizontally
+          paddingLeft: isMobile ? "10px" : "50px",
+          paddingRight: isMobile ? "10px" : "50px",
+        }}
+      >
         {recipes.map((recipe) => (
           <Grid
             item
@@ -32,7 +60,10 @@ export default function RecipeSection() {
             sm={6}
             md={3}
             key={recipe.id}
-            sx={{ display: "flex", justifyContent: "center" }}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+            }}
           >
             <Box
               sx={{
@@ -50,6 +81,7 @@ export default function RecipeSection() {
                   width: "100%",
                   boxShadow: "none",
                   backgroundColor: "transparent",
+                  borderRadius: 0,
                 }}
               >
                 <CardMedia
@@ -67,10 +99,10 @@ export default function RecipeSection() {
                   sx={{
                     backgroundColor: "#EEEAE6",
                     padding: "16px",
-                    height: "150px", // Sätt en fast höjd
+                    height: "150px",
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "flex-start", // Placera texten i toppen
+                    justifyContent: "flex-start",
                     "&:last-child": { paddingBottom: "16px" },
                   }}
                 >
@@ -83,7 +115,7 @@ export default function RecipeSection() {
                   sx={{
                     display: "flex",
                     justifyContent: "center",
-                    marginTop: "auto", // Placera knapparna längst ner
+                    marginTop: "auto",
                     padding: "8px 16px",
                   }}
                 >
