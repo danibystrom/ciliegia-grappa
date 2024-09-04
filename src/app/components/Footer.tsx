@@ -1,8 +1,20 @@
 "use client";
 
-import { Box, Grid, Link, Typography } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Link,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 
 export default function Footer() {
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
+
   return (
     <Box
       component="footer"
@@ -11,7 +23,7 @@ export default function Footer() {
         backgroundColor: "#000",
         color: "#fff",
         padding: "40px",
-        height: "50vh",
+        minHeight: "50vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -116,14 +128,19 @@ export default function Footer() {
               sx={{
                 width: 250,
                 height: "auto",
+                margin: isMobile ? "50px" : "0px",
               }}
             />
           </Grid>
         </Grid>
       </Box>
 
-      <Box sx={{ textAlign: "center", padding: "20px 0" }}>
-        <Typography variant="body2">
+      <Box
+        sx={{
+          textAlign: "center",
+        }}
+      >
+        <Typography variant="body2" sx={{ padding: isMobile ? "0px" : "50px" }}>
           © 2024 Ciliegia. All Rights Reserved.
         </Typography>
       </Box>

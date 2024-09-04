@@ -11,7 +11,7 @@ export default function AboutSection() {
         flexDirection: "column",
       }}
     >
-      <Grid container sx={{ height: "100vh" }}>
+      <Grid container sx={{ height: { xs: "auto", md: "100vh" } }}>
         <Grid item xs={12} md={6} sx={{ display: "flex", height: "100%" }}>
           <Box
             component="img"
