@@ -64,6 +64,7 @@ export default function HeroBanner() {
             maxWidth: isMobile ? "150px" : "200px",
             lineHeight: 1.5,
             textAlign: "left",
+            display: isMobile ? "none" : "block",
           }}
         >
           SWEET TEMPTATION, CHERRY SENSATION
@@ -73,12 +74,13 @@ export default function HeroBanner() {
       <Box
         sx={{
           position: "absolute",
-          bottom: "15vh",
-          left: "10px",
+          bottom: isMobile ? "55vh" : "15vh",
+          paddingLeft: isMobile ? "10px" : "50px",
+
           backgroundColor: "transparent",
-          padding: "50px",
+          paddingBottom: "50px",
           border: "none",
-          borderShadow: "none",
+          boxhadow: "none",
         }}
       >
         <Typography variant="h6" sx={{ mb: 1 }}>
