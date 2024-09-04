@@ -120,8 +120,11 @@ export default function RecipeSection() {
                   <Button
                     size="large"
                     sx={{
+                      fontSize: isMobile ? "0.8rem" : "1rem",
+                      padding: isMobile ? "20px 12px" : "10px 20px",
                       color: "#C1121F",
-                      margin: "50px",
+                      margin: isMobile ? "20px" : "50px",
+                      whiteSpace: "nowrap",
                       "&:hover": {
                         backgroundColor: "transparent",
                         fontWeight: 600,

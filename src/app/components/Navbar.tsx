@@ -43,7 +43,8 @@ export default function Navbar() {
             size="large"
             edge="end"
             aria-label="menu"
-            sx={{
+            disableRipple
+                sx={{
               mr: 2,
               color: "#000000", // Ensure IconButton does not override icon color
               "&:hover": {

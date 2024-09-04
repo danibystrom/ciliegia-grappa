@@ -64,7 +64,13 @@ export default function HeroBanner() {
             maxWidth: isMobile ? "150px" : "200px",
             lineHeight: 1.5,
             textAlign: "left",
-            display: isMobile ? "none" : "block",
+            display: isMobile
+              ? "none"
+              : isTablet
+              ? "none"
+              : isDesktop
+              ? "block"
+              : "block",
           }}
         >
           SWEET TEMPTATION, CHERRY SENSATION
