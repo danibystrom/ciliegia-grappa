@@ -1,11 +1,5 @@
 "use client";
-import {
-  Box,
-  Button,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 export default function HeroBanner() {
   const theme = useTheme();
@@ -22,8 +16,8 @@ export default function HeroBanner() {
         backgroundPosition: "center",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "flex-start",
+        justifyContent: "flex-start", // Ensures content starts from the top
+        alignItems: "flex-start", // Align items to the left
         padding: isMobile ? "20px" : "50px",
         color: "#000",
       }}
@@ -31,9 +25,11 @@ export default function HeroBanner() {
       <Box
         sx={{
           display: "flex",
-          alignItems: "center",
+          flexDirection: "row", // Align items in a row
+          alignItems: "center", // Align items vertically centered
           gap: 2,
           flexWrap: "wrap",
+          width: "100%", // Ensure it uses full width to align items properly
         }}
       >
         <Box
@@ -58,36 +54,12 @@ export default function HeroBanner() {
             fontSize: isMobile ? "1rem" : "1.1rem",
             maxWidth: isMobile ? "150px" : "200px",
             lineHeight: 1.5,
-            justifyContent: "bottom",
+            textAlign: "left", // Align text to the left
           }}
         >
           SWEET TEMPTATION, CHERRY SENSATION
         </Typography>
       </Box>
-
-      <Typography variant="body1" sx={{ mt: 5 }}>
-        PUT SOME ICE IN IT
-        <br />
-        Lorem ipsum Lorem ipsum
-        <br />
-        Lorem ipsum Lorem ipsum
-        <br />
-        Lorem ipsum
-      </Typography>
-      <Button
-        variant="contained"
-        sx={{
-          mt: 4,
-          backgroundColor: "#000",
-          color: "#fff",
-          borderRadius: "0 !important",
-          "&:hover": {
-            backgroundColor: "#333",
-          },
-        }}
-      >
-        SHOP CILIEGIA
-      </Button>
     </Box>
   );
 }

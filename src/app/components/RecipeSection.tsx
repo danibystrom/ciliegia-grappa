@@ -25,7 +25,6 @@ export default function RecipeSection() {
         minHeight: "80vh",
       }}
     >
-      {/* Title Section */}
       <Box
         sx={{
           width: "100%",
@@ -41,14 +40,13 @@ export default function RecipeSection() {
         </Typography>
       </Box>
 
-      {/* Recipes Grid */}
       <Grid
         container
         spacing={2}
         sx={{
           maxWidth: "100%",
           display: "flex",
-          justifyContent: "center", // Centers the Grid items horizontally
+          justifyContent: "center",
           paddingLeft: isMobile ? "10px" : "50px",
           paddingRight: isMobile ? "10px" : "50px",
         }}

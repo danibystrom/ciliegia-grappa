@@ -14,20 +14,18 @@ export default function Footer() {
         height: "50vh",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between", // För att separera innehållet från copyright-texten
+        justifyContent: "space-between",
       }}
     >
-      {/* Innehållscontainer som centreras */}
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          flexGrow: 1, // Tar upp tillgängligt utrymme för att centrera innehållet vertikalt
+          flexGrow: 1,
         }}
       >
         <Grid container spacing={4}>
-          {/* Kolumn för Om Oss / Information */}
           <Grid item xs={12} sm={6} md={3}>
             <Typography
               variant="h6"
@@ -48,7 +46,6 @@ export default function Footer() {
             </Link>
           </Grid>
 
-          {/* Kolumn för Produkter & Upplevelser */}
           <Grid item xs={12} sm={6} md={3}>
             <Typography
               variant="h6"
@@ -73,7 +70,6 @@ export default function Footer() {
             </Link>
           </Grid>
 
-          {/* Kolumn för Kundservice & Kontakt */}
           <Grid item xs={12} sm={6} md={3}>
             <Typography
               variant="h6"
@@ -102,7 +98,6 @@ export default function Footer() {
             </Link>
           </Grid>
 
-          {/* Kolumn för Logotyp */}
           <Grid
             item
             xs={12}
@@ -127,7 +122,6 @@ export default function Footer() {
         </Grid>
       </Box>
 
-      {/* Copyright längst ner */}
       <Box sx={{ textAlign: "center", padding: "20px 0" }}>
         <Typography variant="body2">
           © 2024 Ciliegia. All Rights Reserved.
