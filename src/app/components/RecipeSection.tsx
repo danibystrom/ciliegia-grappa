@@ -35,7 +35,7 @@ export default function RecipeSection() {
           marginTop: "5vh",
         }}
       >
-        <Typography variant="h4" sx={{ color: "#000" }}>
+        <Typography variant="h2" sx={{ color: "#000" }}>
           RECIPES
         </Typography>
       </Box>
@@ -105,7 +105,7 @@ export default function RecipeSection() {
                   }}
                 >
                   <Typography variant="h6">{recipe.title}</Typography>
-                  <Typography variant="body2" sx={{ marginTop: 2 }}>
+                  <Typography variant="body1" sx={{ marginTop: 2 }}>
                     {recipe.description}
                   </Typography>
                 </CardContent>

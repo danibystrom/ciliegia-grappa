@@ -83,10 +83,10 @@ export default function HeroBanner() {
           boxhadow: "none",
         }}
       >
-        <Typography variant="h4" sx={{ mb: 2 }}>
+        <Typography variant="h2" sx={{ mb: 2 }}>
           PUT SOME ICE IN IT
         </Typography>
-        <Typography variant="body2" sx={{ mb: 3 }}>
+        <Typography variant="body1" sx={{ mb: 3 }}>
           Unlock the magic with Ciliegia Cherry Grappa where every sip is a bold
           adventure. Crafted with passion and a touch of mischief, Ciliegia is
           not just a drink. It's a tantalizing journey for your taste buds.
@@ -97,6 +97,7 @@ export default function HeroBanner() {
         <Button
           variant="contained"
           color="primary"
+          disableRipple
           sx={{ borderRadius: 0, width: "70%" }}
         >
           SHOP CILIEGIA

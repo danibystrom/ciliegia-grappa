@@ -39,7 +39,7 @@ export default function AboutSection() {
             height: "100%",
           }}
         >
-          <Typography variant="h4" sx={{ fontWeight: 700, marginBottom: 6 }}>
+          <Typography variant="h3" sx={{ fontWeight: 600, marginBottom: 6 }}>
             BORN IN THE HEART OF ITALY
           </Typography>
           <Typography variant="body1" sx={{ marginBottom: 4 }}>
@@ -62,6 +62,7 @@ export default function AboutSection() {
           </Typography>
           <Button
             variant="contained"
+            disableRipple
             sx={{
               backgroundColor: "#000",
               color: "#fff",
