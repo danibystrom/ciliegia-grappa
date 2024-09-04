@@ -74,24 +74,32 @@ export default function HeroBanner() {
       <Box
         sx={{
           position: "absolute",
-          bottom: isMobile ? "55vh" : "15vh",
+          bottom: isMobile ? "50dvh" : "15dvh",
           paddingLeft: isMobile ? "10px" : "50px",
-
+          maxWidth: isMobile ? "90%" : "500px",
           backgroundColor: "transparent",
           paddingBottom: "50px",
           border: "none",
           boxhadow: "none",
         }}
       >
-        <Typography variant="h6" sx={{ mb: 1 }}>
-          Title Here
+        <Typography variant="h4" sx={{ mb: 2 }}>
+          PUT SOME ICE IN IT
         </Typography>
-        <Typography variant="body2" sx={{ mb: 2 }}>
-          This is the body text of the box. You can include more information
-          here.
+        <Typography variant="body2" sx={{ mb: 3 }}>
+          Unlock the magic with Ciliegia Cherry Grappa where every sip is a bold
+          adventure. Crafted with passion and a touch of mischief, Ciliegia is
+          not just a drink. It's a tantalizing journey for your taste buds.
+          Perfectly chilled and unapologetically daring, Ciliegia is the
+          ultimate indulgence for those who crave a touch of adventure with
+          their sophistication.
         </Typography>
-        <Button variant="contained" color="primary">
-          Click Me
+        <Button
+          variant="contained"
+          color="primary"
+          sx={{ borderRadius: 0, width: "70%" }}
+        >
+          SHOP CILIEGIA
         </Button>
       </Box>
     </Box>
