@@ -1,4 +1,3 @@
-import { useMediaQuery, useTheme } from "@mui/material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
@@ -25,8 +24,6 @@ interface ContactFormProps {
 }
 
 export default function ContactForm({ open, handleClose }: ContactFormProps) {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     handleClose();

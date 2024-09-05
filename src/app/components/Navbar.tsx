@@ -57,7 +57,7 @@ export default function Navbar() {
               },
             }}
           >
-            SHOW ME
+            CONTACT ME
           </Button>
         </Toolbar>
       </AppBar>

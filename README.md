@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ciliegia Grappa
 
-## Getting Started
+**Ciliegia Grappa** is a unique and exquisite cherry-flavored grappa, crafted for those who appreciate fine and distinctive spirits. If you're curious to know more about Ciliegia Grappa, use the contact form to get in touch, and we'll provide you with all the details you need.
 
-First, run the development server:
+This project was created as part of an **Interface Design** course assignment, where the task was to develop a visual identity and then implement it on the web. The goal was to design a cohesive brand experience and integrate it into a fully functional website.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Responsive contact form modal for user inquiries
+- Simple, intuitive UI built with React, TypeScript, and Material UI
+- Input validation for name and email fields
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Clone the repository:**
 
-## Learn More
+   ```bash
+   git clone https://github.com/danibystrom/ciliegia-grappa.git
+   cd ciliegia-grappa
 
-To learn more about Next.js, take a look at the following resources:
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install Dependencies**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Run the Application**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributors 💪🏼
+  Daniela Byström [@danibystrom](https://github.com/danibystrom)
