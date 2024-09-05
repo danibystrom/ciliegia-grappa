@@ -1,17 +1,21 @@
-// ButtonAppBar.tsx
 "use client";
-import DragHandleIcon from "@mui/icons-material/DragHandle";
-import { useMediaQuery, useTheme } from "@mui/material";
+import { Typography, useMediaQuery, useTheme } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
+import React from "react";
+import ContactForm from "./ContactForm";
 
 export default function Navbar() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -43,24 +47,23 @@ export default function Navbar() {
             size="large"
             edge="end"
             aria-label="menu"
+            onClick={handleOpen}
             disableRipple
-                sx={{
+            sx={{
               mr: 2,
-              color: "#000000", // Ensure IconButton does not override icon color
+              color: "#000000",
               "&:hover": {
                 boxShadow: "none",
                 backgroundColor: "transparent",
               },
             }}
           >
-            <DragHandleIcon
-              sx={{
-                color: "#000000", // Ensure the color is explicitly set
-              }}
-            />
+            <Typography>CONTACT ME</Typography>
           </IconButton>
         </Toolbar>
       </AppBar>
+
+      <ContactForm open={open} handleClose={handleClose} />
     </Box>
   );
 }
