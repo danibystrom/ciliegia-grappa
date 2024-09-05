@@ -1,8 +1,7 @@
 "use client";
-import { Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Button, useMediaQuery, useTheme } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
 import React from "react";
 import ContactForm from "./ContactForm";
@@ -43,23 +42,23 @@ export default function Navbar() {
             }}
           />
 
-          <IconButton
+          <Button
             size="large"
-            edge="end"
-            aria-label="menu"
             onClick={handleOpen}
             disableRipple
             sx={{
-              mr: 2,
-              color: "#000000",
+              fontSize: isMobile ? "0.8rem" : "1rem",
+              color: "#C1121F",
+              whiteSpace: "nowrap",
               "&:hover": {
-                boxShadow: "none",
                 backgroundColor: "transparent",
+                fontWeight: 600,
+                boxShadow: "none",
               },
             }}
           >
-            <Typography>CONTACT ME</Typography>
-          </IconButton>
+            SHOW ME
+          </Button>
         </Toolbar>
       </AppBar>
 
