@@ -41,7 +41,7 @@ export default function ContactForm({ open, handleClose }: ContactFormProps) {
           YOU WANNA TASTE IT?
         </Typography>
         <Typography id="modal-modal-description" sx={{ mt: 2, color: "#fff" }}>
-          Curious about Ciliegia Grappa? Fill in your details below, and we'll
+          Curious about Ciliegia Grappa? Fill in your details below, and we&apos;ll
           get in touch to tell you more about this unique experience.
         </Typography>
 

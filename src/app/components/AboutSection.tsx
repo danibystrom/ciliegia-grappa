@@ -43,14 +43,14 @@ export default function AboutSection() {
             BORN IN THE HEART OF ITALY
           </Typography>
           <Typography variant="body1" sx={{ marginBottom: 4 }}>
-            Ciliegia is not just a drink, it's a celebration of tradition,
+            Ciliegia is not just a drink, it&apos;s a celebration of tradition,
             craftsmanship, and the unforgettable taste of sun-ripened cherries.
             Our grappa is meticulously crafted from handpicked cherries,
             capturing the essence of Italian passion in every sip.
           </Typography>
           <Typography variant="body1" sx={{ marginBottom: 4 }}>
             With a bold character and a hint of sweetness, Ciliegia is perfect
-            for those who appreciate life's finer indulgences. Whether enjoyed
+            for those who appreciate life&apos;s finer indulgences. Whether enjoyed
             neat, on the rocks, or as the secret twist in your favorite
             cocktail, our cherry grappa promises to turn any moment into a
             vibrant Italian adventure.

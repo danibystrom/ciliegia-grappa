@@ -95,7 +95,7 @@ export default function HeroBanner() {
         <Typography variant="body1" sx={{ mb: 3 }}>
           Unlock the magic with Ciliegia Cherry Grappa where every sip is a bold
           adventure. Crafted with passion and a touch of mischief, Ciliegia is
-          not just a drink. It's a tantalizing journey for your taste buds.
+          not just a drink. It&apos;s a tantalizing journey for your taste buds.
           Perfectly chilled and unapologetically daring, Ciliegia is the
           ultimate indulgence for those who crave a touch of adventure with
           their sophistication.
